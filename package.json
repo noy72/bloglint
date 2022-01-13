@@ -1,20 +1,31 @@
 {
-  "name": "textlint-for-blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "lint": "textlint"
-  },
-  "dependencies": {
-    "textlint": "^11.7.6",
-    "textlint-filter-rule-allowlist": "^2.0.1",
-    "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
-    "textlint-rule-preset-ja-engineering-paper": "^1.0.0",
-    "textlint-rule-preset-ja-spacing": "^2.0.2",
-    "textlint-rule-preset-ja-technical-writing": "^4.0.1",
-    "textlint-rule-preset-japanese": "^5.0.0",
-    "textlint-rule-preset-jtf-style": "^2.3.6"
-  }
+    "name": "textlint-for-blog",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "lint": "textlint",
+        "jest": "jest",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@types/node": "^17.0.8",
+        "textlint": "^11.7.6",
+        "textlint-filter-rule-allowlist": "^2.0.1",
+        "textlint-filter-rule-comments": "^1.2.2",
+        "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
+        "textlint-rule-preset-ja-engineering-paper": "^1.0.0",
+        "textlint-rule-preset-ja-spacing": "^2.0.2",
+        "textlint-rule-preset-ja-technical-writing": "^4.0.1",
+        "textlint-rule-preset-japanese": "^5.0.0",
+        "textlint-rule-preset-jtf-style": "^2.3.6",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.4.0",
+        "jest": "^27.4.7",
+        "prettier": "^2.5.1",
+        "ts-jest": "^27.1.2"
+    }
 }

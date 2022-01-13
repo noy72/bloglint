@@ -1,4 +1,5 @@
-## 指定した範囲ではRuleを無視する
+## 指定した範囲では Rule を無視する
+
 ```
 This is error text.
 
