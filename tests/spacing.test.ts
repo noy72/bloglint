@@ -26,6 +26,11 @@ describe("addSpace", () => {
         text = addSpace("あい`aaaa` あいbb あい");
         expect(text).toBe("あい `aaaa` あい bb あい");
     });
+
+    test("文頭に英単語があり文末に空白がない場合", () => {
+        expect(addSpace("\naaああ")).toBe("\naa ああ");
+        expect(addSpace("\n`aa`ああ")).toBe("\n`aa` ああ");
+    });
 });
 
 describe("patterns", () => {
