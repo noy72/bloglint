@@ -1,10 +1,12 @@
 const regexPatterns = [
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r][a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r]`.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r] [a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r] `.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r][a-zA-Z]+? [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r]`.+?` [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}][a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]`.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\r\n][a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\r\n]`.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}] [a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}] `.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}][a-zA-Z]+? [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]`.+?` [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
 ];
 
 export const addSpace = (str: string) => {
