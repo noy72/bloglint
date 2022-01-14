@@ -1,13 +1,14 @@
 import fs from "fs";
 import process from "process";
 
+// 日本語 + '|'
 const regexPatterns = [
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]\w+?[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]`.+?`[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}] \w+?[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}] `.+?`[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]\w+? [\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
-    /[\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]`.+?` [\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}][a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]`.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}] [a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}] `.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}][a-zA-Z]+? [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
+    /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]`.+?` [\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
 ];
 
 export const addSpace = (str: string) => {
@@ -16,9 +17,7 @@ export const addSpace = (str: string) => {
     regexPatterns.forEach(pattern => {
         const match = str.matchAll(pattern);
         while (true) {
-            const ignorePatterns = [
-                /^\|title [\p{sc=Hiragana}|\p{sc=Katakana}|\p{sc=Han}]$/gu,
-            ];
+            const ignorePatterns: RegExp[] = [/f値/gu];
 
             const { value, done } = match.next();
             if (done) break;
