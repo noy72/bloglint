@@ -1,7 +1,3 @@
-import fs from "fs";
-import process from "process";
-
-// 日本語 + '|'
 const regexPatterns = [
     /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r][a-zA-Z]+?[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
     /[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}\n\r]`.+?`[\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Han}]/gu,
@@ -29,9 +25,8 @@ export const addSpace = (str: string) => {
             }
 
             const preSpace = ["\n", "\r"].includes(text[0]) ? "" : " ";
-            const to = `${text[0]}${preSpace}${text.slice(1, -1).trim()} ${
-                text[text.length - 1]
-            }`;
+            const to = `${text[0]}${preSpace}${text.slice(1, -1).trim()} ${text[text.length - 1]
+                }`;
             console.log(`[*] Replace:\n  "${text}"\n  "${to}"`);
             replaced = replaced.replace(text, to);
         }
