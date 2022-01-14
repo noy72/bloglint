@@ -27,3 +27,9 @@ describe("addSpace", () => {
         expect(text).toBe("あい `aaaa` あい bb あい");
     });
 });
+
+describe("patterns", () => {
+    test("|title を", () => {
+        expect(addSpace("|title を")).toBe("|title を");
+    });
+});
