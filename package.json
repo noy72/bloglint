@@ -6,7 +6,8 @@
     "scripts": {
         "lint": "textlint",
         "jest": "jest",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+		"space": "ts-node src/main.ts"
     },
     "dependencies": {
         "@types/node": "^17.0.8",
