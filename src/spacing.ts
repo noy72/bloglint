@@ -27,8 +27,9 @@ export const addSpace = (str: string) => {
             }
 
             const preSpace = ["\n", "\r"].includes(text[0]) ? "" : " ";
-            const to = `${text[0]}${preSpace}${text.slice(1, -1).trim()} ${text[text.length - 1]
-                }`;
+            const to = `${text[0]}${preSpace}${text.slice(1, -1).trim()} ${
+                text[text.length - 1]
+            }`;
             console.log(`[*] Replace:\n  "${text}"\n  "${to}"`);
             replaced = replaced.replace(text, to);
         }
