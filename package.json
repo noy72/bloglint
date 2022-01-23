@@ -10,7 +10,7 @@
         "space": "ts-node src/main.ts"
     },
     "dependencies": {
-        "@types/node": "^17.0.8",
+        "@types/node": "^17.0.10",
         "textlint": "^11.7.6",
         "textlint-filter-rule-allowlist": "^2.0.1",
         "textlint-filter-rule-comments": "^1.2.2",
